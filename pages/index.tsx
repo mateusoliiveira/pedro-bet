@@ -1,86 +1,100 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { GetServerSidePropsContext, NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import Banner from "../public/banner.jpg";
+import { AiFillDollarCircle, AiFillBank } from "react-icons/ai";
+import { RiLuggageDepositFill } from "react-icons/ri";
+import Schedule from "../components/Schedule";
 
-const Home: NextPage = () => {
+const Home: NextPage<{ data: any }> = ({ data }: { data: any }) => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="flex min-h-screen flex-col items-center justify-center">
       <Head>
-        <title>Create Next App</title>
+        <title>pedroBet</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Come to my store for great apparel!"
+        />
+        <meta property="og:title" content="Aposta Ganha Bônus 5" />
+        <meta
+          property="og:description"
+          content="bônus grátis 5 reais aposta bet futebol campeonatos ligas barcelona real madrid green odds casa grana extra"
+        />
+        <meta property="og:url" content="https://myclothingstore.com/" />
+        <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
+      <div className="flex w-full flex-1 flex-col items-center justify-center text-center bg-orange-500">
+        <header className="">
+          <Image src={Banner} alt={""} layout="responsive" />
+        </header>
+        <section className="text-gray-600 body-font">
+          {/* <Schedule schedule={data} /> */}
+          <div className="container px-5 py-6 mx-auto mt-10">
+            <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+              <button className="uppercase shadow-lg text-2xl font-bold tracking-wide bg-orange-600 text-gray-100 p-3 rounded-lg w-1/3 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:scale-105 transition-all">
+                FAÇA AQUI SUA PRIMEIRA APOSTA GRÁTIS
+              </button>
+            </div>
+            <div className="flex flex-wrap -m-4">
+              <div className="xl:w-1/3 md:w-1/2 p-4">
+                <div className="border border-gray-200 p-6 rounded-lg bg-slate-100">
+                  <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-orange-500 mb-4">
+                    <AiFillDollarCircle size="30" />
+                  </div>
+                  <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
+                    Bônus sem Rollover
+                  </h2>
+                  <p className="leading-relaxed text-base">
+                    Se sua aposta grátis de R$5 for vencedora, seu saque já está
+                    liberado.
+                  </p>
+                </div>
+              </div>
+              <div className="xl:w-1/3 md:w-1/2 p-4">
+                <div className="border border-gray-200 p-6 rounded-lg bg-slate-100">
+                  <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-orange-500 mb-4">
+                    <RiLuggageDepositFill size="30" />
+                  </div>
+                  <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
+                    Deposite a partir de R$1
+                  </h2>
+                  <p className="leading-relaxed text-base">
+                    Aqui você começa a apostar com qualquer valor, até um real!
+                  </p>
+                </div>
+              </div>
+              <div className="xl:w-1/3 md:w-1/2 p-4">
+                <div className="border border-gray-200 p-6 rounded-lg bg-slate-100">
+                  <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-orange-500 mb-4">
+                    <AiFillBank size="30" />
+                  </div>
+                  <h2 className="text-lg text-gray-900 font-medium title-font mb-2">
+                    Saques e depósitos via PIX
+                  </h2>
+                  <p className="leading-relaxed text-base">
+                    Saque e depósito via PIX sem burocracia, dinheiro na sua
+                    conta instantaneamente.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-  )
+  );
+};
+
+export async function getServerSideProps() {
+  const res = await fetch(`http://localhost:3000/api/schedule`, {
+    headers: {
+      "Cache-Control": "public, s-maxage=10, stale-while-revalidate=59",
+    },
+  });
+  const data = await res.json();
+  return { props: { data } };
 }
 
-export default Home
+export default Home;
