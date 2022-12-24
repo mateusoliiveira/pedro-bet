@@ -94,14 +94,4 @@ const Home: NextPage<{ data: any }> = ({ data }: { data: any }) => {
   );
 };
 
-export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/schedule`, {
-    headers: {
-      "Cache-Control": "public, s-maxage=10, stale-while-revalidate=59",
-    },
-  });
-  const data = await res.json();
-  return { props: { data } };
-}
-
 export default Home;
