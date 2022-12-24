@@ -39,7 +39,7 @@ const Home: NextPage<{ data: any }> = ({ data }: { data: any }) => {
                     "https://register.apostaganha.bet/?cadastro=pedcardoso"
                   )
                 }
-                className="uppercase shadow-lg text-2xl font-bold tracking-wide bg-orange-600 text-gray-100 p-3 rounded-lg w-1/3 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:scale-105 transition-all"
+                className="w-2/3 lg:w-1/3 uppercase shadow-lg text-2xl font-bold tracking-wide bg-orange-600 text-gray-100 p-3 rounded-lg focus:outline-none focus:shadow-outline hover:bg-green-500 hover:scale-105 transition-all"
               >
                 FAÇA AQUI SUA PRIMEIRA APOSTA GRÁTIS
               </button>
