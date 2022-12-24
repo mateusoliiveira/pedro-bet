@@ -33,7 +33,14 @@ const Home: NextPage<{ data: any }> = ({ data }: { data: any }) => {
           {/* <Schedule schedule={data} /> */}
           <div className="container px-5 py-6 mx-auto mt-10">
             <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-              <button className="uppercase shadow-lg text-2xl font-bold tracking-wide bg-orange-600 text-gray-100 p-3 rounded-lg w-1/3 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:scale-105 transition-all">
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://register.apostaganha.bet/?cadastro=pedcardoso"
+                  )
+                }
+                className="uppercase shadow-lg text-2xl font-bold tracking-wide bg-orange-600 text-gray-100 p-3 rounded-lg w-1/3 focus:outline-none focus:shadow-outline hover:bg-green-500 hover:scale-105 transition-all"
+              >
                 FAÇA AQUI SUA PRIMEIRA APOSTA GRÁTIS
               </button>
             </div>
