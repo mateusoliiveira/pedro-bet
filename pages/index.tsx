@@ -10,18 +10,15 @@ const Home: NextPage<{ data: any }> = ({ data }: { data: any }) => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
       <Head>
-        <title>pedroBet</title>
+        <title>jpGreens</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Come to my store for great apparel!"
-        />
-        <meta property="og:title" content="Aposta Ganha Bônus 5" />
+        <meta name="description" content="Cadastre-se!" />
+        <meta property="og:title" content="Cadastre-se já e aproveite" />
         <meta
           property="og:description"
-          content="bônus grátis 5 reais aposta bet futebol campeonatos ligas barcelona real madrid green odds casa grana extra"
+          content="5 reais futebol campeonatos ligas barcelona real madrid grana extra"
         />
-        <meta property="og:url" content="https://myclothingstore.com/" />
+        <meta property="og:url" content="https://jpgreens.vercel.app/" />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -30,7 +27,6 @@ const Home: NextPage<{ data: any }> = ({ data }: { data: any }) => {
           <Image src={Banner} alt={""} layout="responsive" />
         </header>
         <section className="text-gray-600 body-font">
-          {/* <Schedule schedule={data} /> */}
           <div className="container px-5 py-6 mx-auto mt-10">
             <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
               <button
@@ -41,7 +37,7 @@ const Home: NextPage<{ data: any }> = ({ data }: { data: any }) => {
                 }
                 className="w-2/3 lg:w-1/3 uppercase shadow-lg text-2xl font-bold tracking-wide bg-orange-600 text-gray-100 p-3 rounded-lg focus:outline-none focus:shadow-outline hover:bg-green-500 hover:scale-105 transition-all"
               >
-                FAÇA AQUI SUA PRIMEIRA APOSTA GRÁTIS
+                FAÇA SEU CADASTRO
               </button>
             </div>
             <div className="flex flex-wrap -m-4">
@@ -54,7 +50,7 @@ const Home: NextPage<{ data: any }> = ({ data }: { data: any }) => {
                     Bônus sem Rollover
                   </h2>
                   <p className="leading-relaxed text-base">
-                    Se sua aposta grátis de R$5 for vencedora, seu saque já está
+                    Se a sua primeira de R$5 for vencedora, seu saque já está
                     liberado.
                   </p>
                 </div>
@@ -68,7 +64,7 @@ const Home: NextPage<{ data: any }> = ({ data }: { data: any }) => {
                     Deposite a partir de R$1
                   </h2>
                   <p className="leading-relaxed text-base">
-                    Aqui você começa a apostar com qualquer valor, até um real!
+                    Aqui você começa a operar com qualquer valor, até um real!
                   </p>
                 </div>
               </div>
